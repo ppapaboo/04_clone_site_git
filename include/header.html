@@ -1,0 +1,116 @@
+<header class="header">
+    <div class="top-hd">
+        <div class="gnb">
+            <a href="/" class="only-web">
+                <img class="logoimg-1" src="./img/logo.png" alt="제일 풍경채">
+            </a>
+            <a href="/" class="only-mobile">
+                <img class="logoimg-2" src="./img/logo_w.png" alt="제일 풍경채">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-gnb">
+                <li><a href="subpage_1_0.html?board=1_0&name=분양정보">분양정보</a></li>
+                <li><a href="subpage_2_0.html?board=1_0&name=현장정보">현장정보</a></li>
+                <li>브랜드</li>
+                <li>고객서비스</li>
+            </ul>
+        </nav>
+        <nav class="sub-nav only-web">
+            <ul class="sub-menu">
+                <li>
+                    <a href="#">고객센터</a>
+                </li>
+                <li>
+                    <a href="#">관심고객 등록</a>
+                </li>
+                <li class="sub-bi">
+                    <a href="#" target="_blank"><img src="./img/bi.png" alt="제일건설"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="lnb" style="display: none;">
+        <div class="lnb-w">
+            <ul>
+                <li>
+                    <a href="subpage_1_0.html?board=1_1&name=분양예정">분양예정</a>
+                    <a href="subpage_1_0.html?board=1_2&name=분양단지">분양단지</a>
+                    <a>분양 캘린더</a>
+                    <a>청약 가이드</a>
+                    <a>청약가점안내</a>
+                    <a>관심고객 등록</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="subpage_2_0.html?board=1_0&name=공사단지">공사단지</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a>브랜드 소개</a>
+                    <a>CI/BI</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a>고객센터안내</a>
+                    <a>고객문의</a>
+                    <a>A/S신청</a>
+                    <a>A/S결과조회</a>
+                    <a>입주 가이드</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="mobile-nav only-mobile" role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="mobile-gnb">
+                <li>분양정보</li>
+                <li>현장정보</li>
+                <li>브랜드</li>
+                <li>고객서비스</li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script>
+    $(function(){
+        if (matchMedia("screen and (min-width: 769px)").matches) {
+            // 769px 이상에서 사용할 JavaScript
+            $('.header').mouseenter(function(){
+                $(this).addClass('active');
+                $('.lnb').stop().slideDown(100);
+                $('.logoimg-1').attr('src','../img/logo_w.png');
+            });
+            $('.header').mouseleave(function(){
+                $(this).removeClass('active');
+                $('.lnb').stop().slideUp(100);
+                $('.logoimg-1').attr('src','../img/logo.png');
+                $('.main-gnb > li').removeClass('active');
+                $('.lnb-w > ul').removeClass('active');
+            });
+            $('.main-gnb > li').mouseenter(function(){
+                let gnbIndex = $(this).index();
+                $('.main-gnb > li').removeClass('active');
+                $(this).addClass('active');
+                $('.lnb-w > ul').removeClass('active');
+                $('.lnb-w > ul').eq(gnbIndex).addClass('active');
+            });
+            $('.lnb-w > ul').mouseenter(function(){
+                let gnbIndex = $(this).index();
+                $('.main-gnb > li').removeClass('active');
+                $('.main-gnb > li').eq(gnbIndex).addClass('active');
+                $('.lnb-w > ul').removeClass('active');
+                $(this).addClass('active');
+            });
+        }
+
+
+    });
+</script>

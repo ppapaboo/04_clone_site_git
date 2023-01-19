@@ -1,0 +1,90 @@
+<footer class="footer">
+    <div class="wrap">
+        <div class="foot_logo">
+            <a href="#"><img src="./img/bottom_logo.png" alt="제일건설"></a>
+        </div>
+        <div class="foot_txt">
+            <ul class="lst_none">
+                <li><a href="">이용약관</a></li>
+                <li style="font-size:11px;color:#fff;padding:0px;">|</li>
+                <li><a href="">개인정보취급방침</a></li>
+                <li style="font-size:11px;color:#fff;padding:0px;">|</li>
+                <li><a href="">이메일주소무단수집거부</a></li>
+            </ul>
+
+            <table class="ft_addr">
+                <tbody>
+                    <tr>
+                        <th style="padding-left:0px;">광주본사</th>
+                        <td>광주광역시 동구 천변우로 339(수기동) 제일오피스텔 18F</td>
+                        <th>고객센터(하자문의)</th>
+                        <td>1833-8528</td>
+                        <th>대표전화</th>
+                        <td>062-607-5500</td>
+                    </tr>
+                    <tr>
+                        <th style="padding-left:0px;">서울지사</th>
+                        <td>서울특별시 서초구 서초대로 254 오퓨런스빌딩 401호</td>
+                        <th>협력업체문의</th>
+                        <td>02-587-7505</td>
+                        <th>팩스</th>
+                        <td>062-234-3104</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>※ 본 사이트의 이미지는 소비자의 이해를 돕기 위해 제작된 것으로 실제 시공 시 다를 수 있습니다.</p>
+            <p style="padding-top:0px;">COPYRIGHT ⓒ JEIL CONSTRUCTION. ALL RIGHTS RESERVED.<span class="m_hide p_hide"> 풍경채는 자연과 하나되는 삶을 실현할 수 있는 공간을 짓고자 하는 제일건설의 이상을 담았습니다.</span></p>
+        </div>
+        <div class="foot_selec">
+            <button class="button foot_selec_btn" data-on="off">FAMILY SITE</button>
+            <div class="selec-box">
+                <ul class="opt-list">
+                    <li><a href="#">제일건설</a></li>
+                    <li><a href="#">그랑퍼스트</a></li>
+                    <li><a href="#">그랑포레</a></li>
+                    <li><a href="#">그랑베뉴</a></li>
+                </ul>
+                <a class="close" href="javascript:void(0)"><img src="./img/bt_pop_x.png" alt="닫기"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    $(function(){
+        // $('.foot_selec_btn').click(function(){
+        //     var dataOn = $(this).attr('data-on');
+        //     $(this).toggleClass('active');
+        //     if(dataOn=='on'){
+        //         $('.foot_selec .selec-box').hide();
+        //         $(this).attr('data-on','off');
+        //     }else{
+        //         $('.foot_selec .selec-box').show();
+        //         $(this).attr('data-on','on');
+        //     }
+        // });
+        // $('.foot_selec .selec-box .close').click(function(){
+        //     $('.foot_selec .selec-box').hide();
+        //     $('.foot_selec_btn').attr('data-on','off');    
+        // });
+
+        $('.foot_selec_btn').click(function(){
+            var dataOn = $(this).attr('data-on');
+            console.log(dataOn);
+            if (dataOn=='off') {
+                $('.selec-box').show();
+                $(this).attr('data-on','on');
+            } else {
+                $('.selec-box').hide();
+                $(this).attr('data-on','off');
+            }
+            $(this).toggleClass('active');
+        });
+
+        $('.foot_selec .selec-box .close').click(function(){
+            $('.selec-box').hide();
+            $('.foot_selec_btn').attr('data-on','off');
+            $('.foot_selec_btn').removeClass('active');
+        });
+    });
+</script>
