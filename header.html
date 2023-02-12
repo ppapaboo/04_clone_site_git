@@ -75,12 +75,12 @@
             $('.header').mouseenter(function(){
                 $(this).addClass('active');
                 $('.lnb').stop().slideDown(100);
-                $('.logoimg-1').attr('src','../img/logo_w.png');
+                $('.logoimg-1').attr('src','./img/logo_w.png');
             });
             $('.header').mouseleave(function(){
                 $(this).removeClass('active');
                 $('.lnb').stop().slideUp(100);
-                $('.logoimg-1').attr('src','../img/logo.png');
+                $('.logoimg-1').attr('src','./img/logo.png');
                 $('.main-gnb > li').removeClass('active');
                 $('.lnb-w > ul').removeClass('active');
             });
