@@ -485,7 +485,7 @@
 	.bottom-banner li {width: 100%; background-position-x: center;}
 	.service {display: none;}
 }
-@media screen and (min-width:0px) and (max-width:1400px) {
+@media screen and (min-width:768px) and (max-width:1500px) {
 
 	.content-slide .slick-arrow.slick-prev,
 	.content-slide .slick-arrow.slick-next {
