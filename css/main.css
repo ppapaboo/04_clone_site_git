@@ -142,7 +142,7 @@
 .content-wrap .content-top .title-btn a:visited,
 .content-wrap .content-top .title-btn a:hover,
 .content-wrap .content-top .title-btn a:active {
-	color: inherit;
+	color: #000;
 }
 .content-slide .slick-slide {
 	font-size: 0;
@@ -490,7 +490,7 @@
 	.bottom-banner li {width: 100%; background-position-x: center;}
 	.service {display: none;}
 }
-@media screen and (min-width:768px) and (max-width:1500px) {
+@media screen and (min-width:0px) and (max-width:1500px) {
 	.content-slide .slick-arrow.slick-prev,
 	.content-slide .slick-arrow.slick-next {
 		right: 50%;
