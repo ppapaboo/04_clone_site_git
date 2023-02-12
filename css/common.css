@@ -9,11 +9,8 @@
 .wrap {
 	width: 1400px;
 	min-height: 200px;
-	/* background: rgba(255, 0, 0, 0.103); */
 	margin: 0 auto;
 }
-
-
 
 .slick-dotted.slick-slider{
 	margin-bottom: 0px;
@@ -288,7 +285,6 @@
 		transform: none;
 	  }
 }
-
 /* // header */
 
 /* footer */
