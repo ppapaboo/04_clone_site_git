@@ -136,6 +136,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
+	color: inherit;
 }
 
 .content-slide .slick-slide {
@@ -485,7 +486,7 @@
 	.service {display: none;}
 }
 @media screen and (min-width:0px) and (max-width:1400px) {
-	
+
 	.content-slide .slick-arrow.slick-prev,
 	.content-slide .slick-arrow.slick-next {
 		right: 50%;
