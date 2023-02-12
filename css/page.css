@@ -323,3 +323,6 @@
 	.img-right div:last-child {display: inline-block; margin-left: 0px;}
 	.bi-color-wrap img {max-width: 100%;}
 }
+@media screen and (min-width:768px) and (max-width:1500px) {
+	.news-wrap li {width: 31%; margin:0 1% 2%;}
+}
