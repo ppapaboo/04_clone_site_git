@@ -316,7 +316,7 @@
 
 @media screen and (min-width:0px) and (max-width:768px) {
 	.ci-h3 {font-size: 25px;}
-	.ci-img-wrap {height: auto;}
+	.ci-img-wrap {height: auto !important; overflow: auto;}
 	.img-left, .img-right {float:none; width: 100%;}
 	.img-right {border-left: 1px solid #d0d0dd;}
 	.img-right div:last-child {display: inline-block; margin-left: 0px;}
