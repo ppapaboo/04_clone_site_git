@@ -5,11 +5,6 @@
 
 /* 공통 */
 .only-mobile {display: none;}
-/* 반응형 media 쿼리 검색 */
-@media screen and (min-width:0px) and (max-width:768px) {
-	.only-web {display: none;}
-	.only-mobile {display: block;}
-}
 
 .wrap {
 	width: 1400px;
@@ -17,6 +12,8 @@
 	/* background: rgba(255, 0, 0, 0.103); */
 	margin: 0 auto;
 }
+
+
 
 .slick-dotted.slick-slider{
 	margin-bottom: 0px;
@@ -174,32 +171,51 @@
 	color: #d83;
 }
 @media screen and (min-width:0px) and (max-width:768px) {
-	.header {background: #4D4325;height: 50px;}
+	.header {
+		position: relative;
+		top: 0;
+		left: 0;
+		background: #4D4325;height: 50px;
+		z-index: 100;
+	}
 	.top-hd {width: auto;}
-	.top-hd .gnb {width: auto; padding-top: 7px;}
-	.logoimg-2 {height: 35px; margin-left: 65px;}
+	.top-hd .gnb {width: 100%; padding-top: 7px; text-align: center;}
+	.logoimg-2 {height: 33px; margin: 0 auto;}
 	.main-nav {display: none;}
 	.lnb {height: 0; overflow: hidden;}
+	.mobile-nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 50px;
+	}
 	#menuToggle {
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		top: -30px;
+		width: 30px;
+		top: 10px;
 		left: 15px;
 		z-index: 1;
 		-webkit-user-select: none;
 		user-select: none;
+		padding-top: 7px;
 	  }
 	  
 	  #menuToggle input
 	  {
-		display: flex;
-		width: 40px;
-		height: 32px;
+		display: block;
+		width: 30px;
+		height: 30px;
 		position: absolute;
+		top: 0;
+		left: 0;
 		cursor: pointer;
 		opacity: 0;
 		z-index: 102;
+		margin: 0;
+		padding: 0px;
 	  }
 	  
 	  #menuToggle span
@@ -248,8 +264,8 @@
 	  .mobile-gnb
 	  {
 		position: absolute;
-		width: 180px;
-		height: 400px;
+		width: 70vw;
+    	height: 100vh;
 		box-shadow: 0 0 10px #85888C;
 		margin: -50px 0 0 -50px;
 		padding: 50px;
@@ -271,8 +287,6 @@
 	  {
 		transform: none;
 	  }
-
-
 }
 
 /* // header */
@@ -371,3 +385,17 @@
 
 }
 /* //footer */
+
+/* 반응형 media 쿼리 검색 */
+@media screen and (min-width:0px) and (max-width:768px) {
+	.only-web {display: none;}
+	.only-mobile {display: block;}
+	.wrap {width:100%;}
+	.foot_selec {display: none;}
+	.footer .wrap {padding: 30px 0; min-height: 0; text-align: center;}
+	.footer .wrap .foot_logo {display: none;}
+	.footer .wrap .foot_txt .lst_none {display: none;}
+	.footer .wrap .foot_txt tr {display: none;}
+	.footer .wrap .foot_txt span {display: none;}
+    .footer .wrap .foot_txt > p {padding: 0; font-size: 13px;}
+}

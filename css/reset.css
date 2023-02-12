@@ -75,3 +75,12 @@ button {
 	background-image: url(../img/ic_arrow_w.png);
 	border: 1px solid #fff;
 }
+@media screen and (min-width:0px) and (max-width:768px) {
+	.button,
+	.button:focus,
+	.button:active {
+		height: 35px;
+		line-height: 30px;
+		padding: 0 10px;
+	}
+}
